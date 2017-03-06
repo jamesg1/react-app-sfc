@@ -19,11 +19,10 @@
     "lodash": "4.16.2",
     "preact": "^6.4.0",
     "preact-compat": "^3.9.3",
-    "react": "15.3.2",
-    "react-dom": "15.3.2",
-    "react-redux": "4.4.0",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-redux": "^5.0.3",
     "react-router": "4.0.0-alpha.5",
-    "react-tap-event-plugin": "^1.0.0",
     "redux": "3.3.1",
     "redux-thunk": "^2.1.0"
   },
@@ -38,13 +37,13 @@
     "babel-preset-react": "6.16.0",
     "babel-register": "6.16.0",
     "css-loader": "0.25.0",
-    "enzyme": "2.0.0",
+    "enzyme": "^2.0.0",
     "enzyme-to-json": "^1.3.0",
     "eslint": "3.6.1",
     "eslint-config-standard": "6.1.0",
     "eslint-config-standard-jsx": "3.1.0",
     "eslint-config-standard-react": "4.1.0",
-    "eslint-loader": "1.3.0",
+    "eslint-loader": "^1.6.3",
     "eslint-plugin-promise": "2.0.1",
     "eslint-plugin-react": "6.3.0",
     "eslint-plugin-standard": "2.0.0",
@@ -53,12 +52,16 @@
     "json-loader": "0.5.4",
     "material-ui": "^0.17.0",
     "react-addons-test-utils": "15.3.2",
-    "react-tap-event-plugin": "^1.0.0",
+    "react-tap-event-plugin": "^2.0.1",
     "react-test-renderer": "15.3.2",
     "style-loader": "0.13.1",
-    "webpack": "2.1.0-beta.25",
-    "webpack-dev-server": "1.16.2"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
   },
   "author": "James G",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jamesg1/react-app-sfc.git"
+  }
 }
