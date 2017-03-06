@@ -1,8 +1,14 @@
 import React from 'react'
+import AppBar from 'material-ui/AppBar'
 import { connect } from 'react-redux'
 import { setSearchTerm } from '../actions'
 import { Link } from 'react-router'
 const { func, bool, string } = React.PropTypes
+import FlatButton from 'material-ui/FlatButton'
+
+function handleTouchTap () {
+  console.log('onTouchTap triggered on the title component')
+}
 
 const Header = React.createClass({
   propTypes: {
@@ -19,22 +25,18 @@ const Header = React.createClass({
       utilSpace = <input type='text' placeholder='Search' value={this.props.searchTerm} onChange={this.handleSearchTermChange} />
     } else {
       utilSpace = (
-        <h2 className='header-back'>
-          <Link to='/'>
-            Back
-          </Link>
-        </h2>
+        <Link to='/'>
+          <FlatButton label='Back' />
+        </Link>
       )
     }
     return (
-      <header>
-        <h1>
-          <Link to='/'>
-            svideo
-          </Link>
-        </h1>
-        {utilSpace}
-      </header>
+      <AppBar
+        title={<Link to='/'>Home</Link>}
+        onTitleTouchTap={handleTouchTap}
+        iconElementRight={utilSpace}
+        showMenuIconButton={false}
+      />
     )
   }
 })
