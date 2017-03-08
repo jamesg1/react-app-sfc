@@ -37,17 +37,19 @@ const Details = React.createClass({
       rating = <img src='/public/img/loading.png' alt='loading indicator' />
     }
     return (
-      <div className='details'>
+      <div>
         <Header />
-        <section>
-          <h1>{title}</h1>
-          <h2>({year})</h2>
-          {rating}
-          <img src={`/public/img/posters/${poster}`} />
-          <p>{description}</p>
-        </section>
-        <div>
-          <iframe src={`https://www.youtube-nocookie.com/embed/${trailer}?rel=0&amp;controls=0&amp;showinfo=0`} frameBorder='0' allowFullScreen />
+        <div className='details'>
+          <section>
+            <h1>{title}</h1>
+            <h2>({year})</h2>
+            {rating}
+            <img src={`/public/img/posters/${poster}`} />
+            <p>{description}</p>
+          </section>
+          <div>
+            <iframe src={`https://www.youtube-nocookie.com/embed/${trailer}?rel=0&amp;controls=0&amp;showinfo=0`} frameBorder='0' allowFullScreen />
+          </div>
         </div>
       </div>
     )

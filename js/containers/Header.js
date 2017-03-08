@@ -1,8 +1,27 @@
 import React from 'react'
+import { Link } from 'react-router'
+import AppBar from 'material-ui/AppBar'
 import { connect } from 'react-redux'
 import { setSearchTerm } from '../actions'
-import { Link } from 'react-router'
 const { func, bool, string } = React.PropTypes
+import FlatButton from 'material-ui/FlatButton'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import TextField from 'material-ui/TextField'
+import {white} from 'material-ui/styles/colors'
+
+const muiTheme = getMuiTheme({
+  palette: {
+    textColor: white
+  },
+  underlineStyle: {
+    borderColor: white
+  }
+})
+
+function handleTouchTap () {
+  return
+}
 
 const Header = React.createClass({
   propTypes: {
@@ -14,27 +33,49 @@ const Header = React.createClass({
     this.props.dispatch(setSearchTerm(event.target.value))
   },
   render () {
+    let homeLink = <Link to='/' style={{
+      'display': 'block',
+      color: 'white',
+      'textDecoration': 'none'
+    }}>The Cove Chants</Link>
+
     let utilSpace
     if (this.props.showSearch) {
-      utilSpace = <input type='text' placeholder='Search' value={this.props.searchTerm} onChange={this.handleSearchTermChange} />
+      utilSpace = <TextField
+        id='search__field'
+        hintText={this.props.searchTerm}
+        value={this.props.searchTerm}
+        underlineShow
+        onChange={this.handleSearchTermChange}
+        underlineStyle={muiTheme.underlineStyle}
+        underlineFocusStyle={muiTheme.underlineStyle}
+
+      />
     } else {
       utilSpace = (
-        <h2 className='header-back'>
-          <Link to='/'>
-            Back
-          </Link>
-        </h2>
+        <FlatButton
+          primary
+          style={{
+            backgroundColor: 'rgb(255, 255, 255)'
+          }}>
+          <Link to='/'
+            style={{
+              'display': 'block',
+              color: 'rgba(0, 0, 0, 0.870588)',
+              'textDecoration': 'none'
+            }}>Back</Link>
+        </FlatButton>
       )
     }
     return (
-      <header>
-        <h1>
-          <Link to='/'>
-            svideo
-          </Link>
-        </h1>
-        {utilSpace}
-      </header>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <AppBar
+          title={homeLink}
+          onTitleTouchTap={handleTouchTap}
+          iconElementRight={utilSpace}
+          showMenuIconButton={false}
+        />
+      </MuiThemeProvider>
     )
   }
 })

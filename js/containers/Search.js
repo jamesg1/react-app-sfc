@@ -22,9 +22,9 @@ const Search = React.createClass({
   },
   render () {
     return (
-      <div className='search'>
+      <div>
         <Header showSearch />
-        <div>
+        <div className='search'>
           {this.props.shows
             .filter((show) => `${show.title} ${show.description}`.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0)
             .map((show) => {
