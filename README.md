@@ -1,4 +1,4 @@
-# react-app-sfc
+# react-app-sfc #
 
 A netflix style React Application for displaying Football Chants with Video content and lyrics. 
 
@@ -11,7 +11,8 @@ This application is using:
 - Webpack 2
 - Jest with enzyme
 
-Running Locally
+
+## Running Locally ##
 
 Make sure you have Node.js with NPM installed
 
