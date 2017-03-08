@@ -15,13 +15,13 @@ Running Locally
 
 Make sure you have Node.js with NPM installed
 
-git clone git@github.com:jamesg1/react-app-sfc.git # or clone your own fork
-cd react-app-sfc
-git checkout feature/material-ui
-npm install -g webpack
-npm install -g standard
-npm install
-npm run dev
+- git clone git@github.com:jamesg1/react-app-sfc.git # or clone your own fork
+- cd react-app-sfc
+- git checkout feature/material-ui
+- npm install -g webpack
+- npm install -g standard
+- npm install
+- npm run dev
 
 Current App with Test Dummy Data:
 ![alt tag](https://s22.postimg.org/f75bpr7pd/screen_example.jpg)
