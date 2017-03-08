@@ -34,6 +34,10 @@ pre {
   text-align: left;
 }
 
+.search {
+  margin-top: 2%;
+}
+
 .search > div > a {
   width: 30%;
   height: 0;
@@ -58,13 +62,14 @@ pre {
 
 .show-card {
   float: left;
-  margin-right: 2%;
+  margin-right: 3%;
+  margin-left: 5%;
   border: 2px solid #333;
   border-radius: 4px;
   text-align: left;
-  width: 32%;
+  width: 25%;
   height: 0;
-  padding-bottom: 19.8%;
+  padding-bottom: 16.8%;
   overflow: hidden;
   margin-bottom: 2%;
 }
@@ -141,6 +146,10 @@ header > h2 {
 header > h2 > a {
   color: #aaa;
   text-decoration: none;
+}
+
+.details {
+  padding: 2% 5%;
 }
 
 .details > div {

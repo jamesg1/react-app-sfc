@@ -20,7 +20,7 @@ const muiTheme = getMuiTheme({
 })
 
 function handleTouchTap () {
-  console.log('onTouchTap triggered on the title component')
+  return
 }
 
 const Header = React.createClass({
@@ -33,6 +33,12 @@ const Header = React.createClass({
     this.props.dispatch(setSearchTerm(event.target.value))
   },
   render () {
+    let homeLink = <Link to='/' style={{
+      'display': 'block',
+      color: 'white',
+      'textDecoration': 'none'
+    }}>The Cove Chants</Link>
+
     let utilSpace
     if (this.props.showSearch) {
       utilSpace = <TextField
@@ -64,7 +70,7 @@ const Header = React.createClass({
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <AppBar
-          title='The Cove Chants'
+          title={homeLink}
           onTitleTouchTap={handleTouchTap}
           iconElementRight={utilSpace}
           showMenuIconButton={false}
