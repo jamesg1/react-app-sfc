@@ -6,6 +6,7 @@ This application is using:
 - Javascript (ES6) - Transpiles into ES5 with Babel
 - React
 - Redux
+- Express
 - ESLint
 - Webpack 2
 - Jest with enzyme
@@ -23,4 +24,4 @@ npm install
 npm run dev
 
 Current App with Test Dummy Data:
-[screen-example.jpg](https://postimg.org/image/i18h379vh/)
+![alt tag](https://s22.postimg.org/f75bpr7pd/screen_example.jpg)
